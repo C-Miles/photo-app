@@ -38,6 +38,15 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
+  config.action_mailer.perform_deliveries = true
+
+
+  # NOTE: commenting this out to try alternative mailing options
+  # config.action_mailer.delivery_method = :test
+  # config.action_mailer.default_url_options = { 
+  #   host: 'miles-photo-app.herokuapp.com/', protocol: 'https' 
+  # }
+
   config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.
