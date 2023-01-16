@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RegistrationsController < Devise::RegistrationsController
   def create
     build_resource(sign_up_params)
@@ -12,8 +14,8 @@ class RegistrationsController < Devise::RegistrationsController
         begin
           @payment.process_payment
           @payment.save
-          # This was just the Exception class per course but Standard is what the linter wants 
-        rescue StandardException => e
+          # This was just the Exception class per course but Standard is what the linter wants
+        rescue StandardError => e
           flash[:error] = e.message
           resource.destroy
           puts 'Payment Failed'

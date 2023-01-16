@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
 
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails', groups: %i[development test]
 gem 'net-smtp', require: false
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
@@ -12,6 +14,7 @@ gem 'devise-bootstrap-views'
 gem 'jquery-rails'
 gem 'rails', '~> 6.1.6', '>= 6.1.6.1'
 gem 'rails-ujs'
+gem 'rubocop', '~> 1.43'
 gem 'stripe'
 gem 'twitter-bootstrap-rails'
 # Use Puma as the app server

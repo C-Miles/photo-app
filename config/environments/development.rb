@@ -1,4 +1,6 @@
-require "active_support/core_ext/integer/time"
+# frozen_string_literal: true
+
+require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -11,9 +13,8 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
-  #config.action_mailer.delivery_method = :test
+  # config.action_mailer.delivery_method = :test
   config.action_mailer.delivery_method = :smtp
-
 
   config.action_mailer.default_url_options = { host: 'http://localhost:3000' }
 
@@ -44,11 +45,10 @@ Rails.application.configure do
 
   config.action_mailer.perform_deliveries = true
 
-
   # NOTE: commenting this out to try alternative mailing options
   # config.action_mailer.delivery_method = :test
-  # config.action_mailer.default_url_options = { 
-  #   host: 'miles-photo-app.herokuapp.com/', protocol: 'https' 
+  # config.action_mailer.default_url_options = {
+  #   host: 'miles-photo-app.herokuapp.com/', protocol: 'https'
   # }
 
   config.action_mailer.perform_caching = false
