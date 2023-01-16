@@ -12,7 +12,8 @@ class RegistrationsController < Devise::RegistrationsController
         begin
           @payment.process_payment
           @payment.save
-        rescue Exception => e
+          # This was just the Exception class per course but Standard is what the linter wants 
+        rescue StandardException => e
           flash[:error] = e.message
           resource.destroy
           puts 'Payment Failed'
