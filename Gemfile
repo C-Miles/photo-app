@@ -9,9 +9,12 @@ gem 'dotenv-rails', groups: %i[development test]
 gem 'net-smtp', require: false
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
+gem 'carrierwave'
 gem 'devise'
 gem 'devise-bootstrap-views'
+gem 'fog-aws'
 gem 'jquery-rails'
+gem 'mini_magick'
 gem 'rails', '~> 6.1.6', '>= 6.1.6.1'
 gem 'rails-ujs'
 gem 'rubocop', '~> 1.43'
